@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lube Oil Skid
+* source:	https://sketchfab.com/3d-models/lube-oil-skid-472ace75c1cc4cc58e575024275e1704
+* author:	MechLab3D (https://sketchfab.com/MechLab85)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lube Oil Skid" (https://sketchfab.com/3d-models/lube-oil-skid-472ace75c1cc4cc58e575024275e1704) by MechLab3D (https://sketchfab.com/MechLab85) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

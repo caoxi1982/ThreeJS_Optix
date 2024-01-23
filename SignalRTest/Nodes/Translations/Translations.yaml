@@ -1,0 +1,51 @@
+Name: Translations
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [36,3],
+    "Body": [
+     "","en-US","zh-CN",
+     "Acknowledge","Acknowledge","",
+     "Acknowledge All","Acknowledge All","",
+     "Confirm","Confirm","",
+     "Confirm All","Confirm All","",
+     "SourceName","Source Variable","",
+     "Timestamp","Timestamp","",
+     "Name","Name","",
+     "Message","Message","",
+     "Active","Active","",
+     "Acked","Acked","",
+     "Confirmed","Confirmed","",
+     "Severity","Severity","",
+     "aaa","aaa","罗克韦尔",
+     "bbb","bbb","自动化",
+     "ccc","ccc","数字化转型",
+     "ddd","ddd","毫无感情的机器",
+     "无锡市","china wuxi","无锡市",
+     "江苏省","China jiangsu","江苏省",
+     "苏州市","China suzhou","苏州市",
+     "3D Demo","3D Demo","3D模型案例",
+     "525","525","",
+     "755","755","",
+     "Alarm 1: Exchange blocked ","Alarm 1: Exchange blocked ","",
+     "Alarm 2: Pump 1 Thermal too high","Alarm 2: Pump 1 Thermal too high","",
+     "Alarm 3: Pump 2 Thermal too high","Alarm 3: Pump 2 Thermal too high","",
+     "alarm1","alarm1","报警1",
+     "alarm2","alarm2","报警2",
+     "alarm3","alarm3","报警3",
+     "Clear525","Clear525","复位525",
+     "Clear755","Clear755","复位755",
+     "Close","Close","",
+     "CW","CW","冷水侧",
+     "HW","HW","热水侧",
+     "Pump1 Run","Pump1 Run","泵1 运行",
+     "Pump2 Run","Pump2 Run","泵2 运行"
+    ]
+   }

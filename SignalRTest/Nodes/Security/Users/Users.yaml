@@ -1,0 +1,20 @@
+Name: Users
+Id: g=8cdfe95c558e909385d4fe7ddc9a2655
+Type: UsersCategoryFolder
+Children:
+- Name: User1
+  Id: g=5b3e6e54287e716e2d01fe1d6d62dca2
+  Type: UserType
+  Children:
+  - Name: LocaleId
+    Id: g=6177c0e26399b172e92791370ea844ba
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "zh-CN"
+  - Name: Language
+    Id: g=943cbebf70f2095bdeb657caca03fc44
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "zh-CN"

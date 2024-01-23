@@ -1,0 +1,585 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: DigitalAlarm1
+  Id: g=870f75d302f31587f525100fecbb8d84
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=7b5a00e5ea0239c1dd6df89a660e1195
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=4a3c7ca8eec70a081f63384aebe1f6c8
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=a1cd1d07e9841f1091599e95d72e6405
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Alarm1"
+      Children:
+      - Name: Mode
+        Id: g=646c7540d46668e581b0c22c867a0860
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=e73b837726bebf396257263544db04c3
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=15;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=a09a72c6c1bd43cebc73a49c46b58187
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":22,"TextId":"Alarm 1: Exchange blocked "}
+  - Name: AutoAcknowledge
+    Id: g=7d68c655bd88ccfb901beff56458a17f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=9894f6867f18ce142b87af8163b0b3d4
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: InputValueTransitioned
+    Id: g=49214466fc87bc61622a5ecdddc12459
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Id: g=4c015a3c2b47bfda41fb53eaf92ec693
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Id: g=f1fea295e776c42c2f1827b699f12d20
+      Type: BaseVariableType
+      DataType: VariableTransition
+      Value: 0
+    - Name: VariableNodePath
+      Id: g=bfe4988b8ca6418a6fa1b6a0eb93a175
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../InputValue"
+    - Name: VariableTransitionEventHandler1
+      Id: g=af66b4262d324abb11ff52a72fe91e57
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=4877e48c8ba5f15c20c85503fcd56614
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+      - Name: MethodsToCall
+        Id: g=d120c6651d9c8097dc04f34acbc0f514
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=39fcb73c594268ee9b64901439ec0560
+          Type: BaseObjectType
+          Children:
+          - Name: ns=3;ObjectPointer
+            Id: g=b16588bccbcff8a682a94d2c196b92b3
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Id: g=c29cfcef9526ee512eb5f2f40bdd032d
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=1e761aa82043da10ca5f925a9a789fe6
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../NetLogic/SignalRTestLogic@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=995af4d1bc0d4b287a39681e3cf4b502
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+          - Name: ns=3;Method
+            Id: g=29b7de1db136998e58005f346bfe831a
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SendAlarms"
+          - Name: InputArguments
+            Id: g=5d40c44fcdc178903b3feb9312146050
+            Type: BaseObjectType
+            Children:
+            - Name: message
+              Id: g=143008de2b153cd53d2a4e50d15d0110
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Id: g=4e62d624e211667455b15016a029619c
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Message"
+                Children:
+                - Name: Mode
+                  Id: g=8d73060a034bfc6d425b4e05a22fe9b1
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  Value: 2
+      - Name: EventArguments
+        Id: g=d4e5d4f58b9abf7fc0170f4dfc97eaa3
+        Type: VariableTransitionEvent
+        Children:
+        - Name: VariableNodeId
+          Id: g=66fc8b7eae5773e41de072644dc0d717
+          Type: BaseVariableType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: NewValue
+          Id: g=3d1a1ed58d391c23c858adf3bb46e243
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Id: g=43b9e7725172185aa3885d960c961e81
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Id: g=d2667976a6ccbcf382d39140f8957b92
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Id: g=b5826f0a52689a45a162ce245dc7d69e
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Id: g=d9190695f491cc83b6acb4ae7437ce5a
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Id: g=5550a710da4d2fd3ed61f066bf3e8f99
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Id: g=b5c655b9163e0febce0b0246587a5f7c
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Id: g=b3e489831d6db9f44e078e22b731e46d
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Id: g=7afa9fcc81970764cae49dbd4fa28259
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Id: g=3e33ca8820b239df5ebde0da1ddf82df
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+- Name: DigitalAlarm2
+  Id: g=472082a831d182f160bb7e744249d8aa
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=34d60b2b472ac169b49e87ab4f4496c8
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=1c1b13890193fc79a9b263740632bb90
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=a49093c25530c42a0de70005915dcc75
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Alarm2"
+      Children:
+      - Name: Mode
+        Id: g=0e59e02a0e78307295cdc65d6a432783
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=a2299245d24d9ab5e06b7deff11fa440
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=15;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=3192b9dde56c56f4287e2f08010ce468
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":22,"TextId":"Alarm 2: Pump 1 Thermal too high"}
+  - Name: AutoAcknowledge
+    Id: g=d967f52720195ca0b3315cf26ce5bd1a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=0fb02494202e9c998cbe489cfbfb81b4
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: InputValueTransitioned
+    Id: g=0e983db40ae01dd3d27b50e69cec2507
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Id: g=9e638c5bf8b0db34bb6ce73779b0d358
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Id: g=c0617b0c6c68a7e7492408a94515031e
+      Type: BaseVariableType
+      DataType: VariableTransition
+      Value: 0
+    - Name: VariableNodePath
+      Id: g=881c068338d3e8f631714964d3337053
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../InputValue"
+    - Name: VariableTransitionEventHandler1
+      Id: g=06566e863df1729c89bef8a2dec9dcce
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=e69d82a91f7740993a5135e079cddaf9
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+      - Name: MethodsToCall
+        Id: g=ff69e2a8460d5ec02e5242ac411ded4f
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=f398829aa530adc3a70d7caaa6056bc0
+          Type: BaseObjectType
+          Children:
+          - Name: ns=3;ObjectPointer
+            Id: g=3466855ef3171b871bea774a6a839401
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Id: g=6739afd6e737c39dd0e9c00a601b9fb7
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=916ce50d5d55ed329febc6489508f8a3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../NetLogic/SignalRTestLogic@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=cbb18672ab3488fc9ddf593dd6254ab7
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+          - Name: ns=3;Method
+            Id: g=64898f562eebb447eb39e30b74a49731
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SendAlarms"
+          - Name: InputArguments
+            Id: g=0191580c2bf27b0dfbe12de7b96942f1
+            Type: BaseObjectType
+            Children:
+            - Name: message
+              Id: g=4be93463142a143711722df0158c079d
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Id: g=5b4464488bd18b04d0fdb7770f540095
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Message"
+                Children:
+                - Name: Mode
+                  Id: g=44280c0ae8bf6926c185ba93a3e85544
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  Value: 2
+      - Name: EventArguments
+        Id: g=8a0bb4cf16c5d01fcf39376df44ca39f
+        Type: VariableTransitionEvent
+        Children:
+        - Name: VariableNodeId
+          Id: g=86f90d5d64bd3a610a66d61eeddfd55c
+          Type: BaseVariableType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: NewValue
+          Id: g=4fb44d2c86b367ef2af8085102a6afe0
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Id: g=edc325e705b4b328af37d7517f057fa8
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Id: g=d85d77c17a90d3011e8f59db57c4092a
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Id: g=7636babf124062d6a3bfc7adbb609d34
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Id: g=a2bb809fb12f528978be225e153b1c14
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Id: g=9389dfe749c475a78de622c8a730544a
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Id: g=5a42d3449e87a6701d3f146a2de426d8
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Id: g=f158d5bad2d3eecb290622e305e290af
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Id: g=089979b7be2179c429b28d958b97941a
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Id: g=26d527ebea2097991a258a969594b975
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+- Name: DigitalAlarm3
+  Id: g=1f5807bba7a243f3d6da89de8ad2f10f
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=7bf841be848bbbd004697a5ee0a0acfb
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=74b842a8e3399919cc3afcfe60fbdfba
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=a53a0e1b9be3462986aa9a668f8372f4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Alarm3"
+      Children:
+      - Name: Mode
+        Id: g=7266473cbb1dc3deb423379c76bf62b1
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=86b714e57378bb7f562e2d6629f52c6e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=15;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=1653a6986604feb8cbba22cc44322b40
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":22,"TextId":"Alarm 3: Pump 2 Thermal too high"}
+  - Name: InputValueTransitioned
+    Id: g=9d2be97c315565da36043f0168758bb9
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Id: g=7b071307f775dd6960da22f16d707060
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Id: g=59c55735c4eb7614506760341c2a1a51
+      Type: BaseVariableType
+      DataType: VariableTransition
+      Value: 0
+    - Name: VariableNodePath
+      Id: g=db10143ce0da13b7a0575d8a9eb57b80
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../InputValue"
+    - Name: VariableTransitionEventHandler1
+      Id: g=71f3571a3084b74d49b4c37530c8af29
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=4e98811086408d8f78b51458735e9641
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+      - Name: MethodsToCall
+        Id: g=9869ecc052890881345c98ae45c15421
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=5dd57ebefc90a9e89c52c8938cb21b49
+          Type: BaseObjectType
+          Children:
+          - Name: ns=3;ObjectPointer
+            Id: g=e41542926c7b5a6066bb874e5c66097d
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Id: g=4fa7c2cda1fd7fd57e5ab0a54d210ba7
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=8444872ba695619ef9d5137a69b631f4
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../NetLogic/SignalRTestLogic@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=e04acabf64b7473692641f89326bc2f9
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+          - Name: ns=3;Method
+            Id: g=ac1637c1bd82bbd862a72c6456f28b88
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SendAlarms"
+          - Name: InputArguments
+            Id: g=7a80578de9cf0896841102535bbb8d4b
+            Type: BaseObjectType
+            Children:
+            - Name: message
+              Id: g=2bd5cc10d2c58283e836485aff411e76
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Id: g=29d1761b8580e8715a4a5092196cde73
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Message"
+                Children:
+                - Name: Mode
+                  Id: g=70d2479a938f80f21e4bb5f6d42882a4
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  Value: 2
+      - Name: EventArguments
+        Id: g=7fd3d3cd02816b19dab1060a9ec6451a
+        Type: VariableTransitionEvent
+        Children:
+        - Name: VariableNodeId
+          Id: g=9aeb4f76e1f99c4298ee55ed13897097
+          Type: BaseVariableType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: NewValue
+          Id: g=48bc716edee30ae56484f1281503ce6f
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Id: g=51ec93044626e9aee778e0f86070a4fc
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Id: g=4175d0a09ef57d546eb9a3c1453df339
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Id: g=efafcd5178fd309324f1af97b0f2d678
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Id: g=57641eeeef9ca06caf6160b576f2e383
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Id: g=3358e2b5d14107eedf9f1a143a49b984
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Id: g=e6c065bb33a1b6174363fff6c0fefbd8
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Id: g=e1300d5eb5f9aa63a6715967020b34e6
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Id: g=c2cd9b8424dc32adf1f4be6031d8a67c
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Id: g=fc0f0a2735d4623dc1123c46785f10b1
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
